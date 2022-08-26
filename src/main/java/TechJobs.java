@@ -86,7 +86,6 @@ public class TechJobs {
         }
 
         do {
-
             System.out.println("\n" + menuHeader);
 
             // Print available choices
@@ -118,8 +117,20 @@ public class TechJobs {
     }
 
     // Print a list of jobs
+    //{position type=Data Scientist / Business Intelligence, name=Data Science, employer=Utilidata, location=Rhode Island, core competency=Statistical Analysis}
     private static void printJobs(ArrayList<HashMap<String, String>> someJobs) {
-
-        System.out.println("printJobs is not implemented yet");
+        if (someJobs.size() >= 1) {
+            for (HashMap<String, String> i : someJobs) {
+                System.out.println("\n*****");
+                System.out.println("position type: " + i.get("position type"));
+                System.out.println("name: " + i.get("name"));
+                System.out.println("employer: " + i.get("employer"));
+                System.out.println("location: " + i.get("location"));
+                System.out.println("core competency: " + i.get("core competency"));
+                System.out.println("*****");
+            }
+        }else {
+            System.out.print("No Results");
+        }
     }
 }
