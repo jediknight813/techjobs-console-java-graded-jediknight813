@@ -122,14 +122,11 @@ public class TechJobs {
         if (someJobs.size() >= 1) {
             for (HashMap<String, String> i : someJobs) {
                 System.out.println("\n*****");
-                System.out.println("position type: " + i.get("position type"));
-                System.out.println("name: " + i.get("name"));
-                System.out.println("employer: " + i.get("employer"));
-                System.out.println("location: " + i.get("location"));
-                System.out.println("core competency: " + i.get("core competency"));
+                i.forEach( (key, value) -> System.out.println(key + ": " + value));
                 System.out.println("*****");
             }
-        }else {
+        }
+        else {
             System.out.print("No Results");
         }
     }
